@@ -21,9 +21,9 @@ class BankAccount():
     return self.balance
 
   def add_interest(self):
-    balance+= * decimal 
-    
+    self.balance += self.balance * 0.00083 
+
   def print_statement(self):
     print(self.full_name)
-    print(f'Account No.: {}')
+    print(f'Account No.: {self.account_number}')
     print.get_balance()
