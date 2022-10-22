@@ -13,8 +13,13 @@ class BankAccount():
 
   def withdrawal(self, amount):
     self.withdrawal -= amount
-    print(f'Amount Withdrawn: ${amount}')
-    print(f'NEW ACCOUNT BALANCE: ${self.balance}\n')
+    if self.balance < 0:
+      print("Cannot complete transaction: Insufficient funds")
+      print("$10 overdraft fee has been applied to the account.\n")
+      self.balance -= 10
+    else:
+      print(f'Amount Withdrawn: ${amount}')
+      print(f'NEW ACCOUNT BALANCE: ${self.balance}\n')
 
   def get_balance(self, balance):
     print(f"Account balance: ${self.balance}\n")
